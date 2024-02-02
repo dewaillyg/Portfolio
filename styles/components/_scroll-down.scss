@@ -1,0 +1,102 @@
+@use '../bases/colors';
+@use '../bases/fonts';
+
+.scroll-down {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    scroll-behavior: smooth;
+    background-color: colors.$black;
+    border-bottom: 1px solid colors.$light-secondary;
+
+    a#scrollDown {
+        position: absolute;
+        scroll-behavior: smooth;
+        height: 70%;
+        width: 40px;
+        border: 2px solid colors.$light;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 5px;
+        border-radius: 3em;
+        
+        .fa-sort-down {
+            position: absolute;
+            color: colors.$light;
+            left: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scale(2);
+            right: 0;
+            top: 0px;
+            margin: auto;
+            animation: move-down 2s infinite;
+        }
+        
+        &::after {
+            position: absolute;
+            content: "SCROLL DOWN";
+            width: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            height: 10px;
+            text-align: center;
+            bottom: -10px;
+            font-family: fonts.$stack;
+            color: colors.$light;
+            opacity: 0.15;
+            transition: opacity .25s ease-in-out;
+        }
+        
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@keyframes move-down {
+    80% {
+        opacity: .5;
+    } to {
+        transform: translateY(2em) scale(2);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .scroll-down a#scrollDown .fa-sort-down {
+        transform: scale(1.5);
+        animation: move-downDeux 2s infinite;
+
+    }
+
+    .scroll-down a#scrollDown::after {
+        font-size: 12px;
+        bottom: -12px;
+    }
+    
+    .scroll-down {
+        height: 75px;
+        
+        a {
+            width: 30px!important;
+            border: 1px solid colors.$light;
+        }
+    }
+}
+
+@keyframes move-downDeux {
+    80% {
+        opacity: .5;
+    } to {
+        transform: translateY(1.5em) scale(1.5);
+        opacity: 0;
+    }
+}

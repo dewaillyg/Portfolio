@@ -1,0 +1,44 @@
+@use './components/loader';
+@use './components/nav';
+@use './components/header';
+@use './components/scrollToTop';
+@use './components/bio';
+@use './components/scroll-down';
+@use './components/projects';
+@use './components/logoWall';
+@use './components/cv';
+@use './components/footer';
+
+@use './bases/colors';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth!important;
+    background-color: colors.$black;
+}
+
+#app {
+    position: absolute;
+    height: 600vh;
+    background-color: pink;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    overflow: hidden!important;
+}
+
+
+
+.secondary {
+    color: colors.$light-secondary!important;
+}
+
+.secondary2 {
+    color: colors.$light!important;
+}

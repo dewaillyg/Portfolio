@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.12 113.32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ddd0c8;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="m36.96,21.84v85.11s-2.93-27.98,31.11-35.41"/>
+  <path class="cls-1" d="m6.05,71.53c31.5,3.52,30.91,35.41,30.91,35.41"/>
+</svg>

@@ -1,0 +1,42 @@
+{
+    "un": {
+        "name": "Réalisation d'un dashboard",
+        "text": "Le dashboard réalisé intègre 5 graphiques dynamiques regroupées en deux parties. La première correspond à la région avec la consommation totale par énergie et leurs TCO / TCH. La deuxième correspond au département, où l’on visualise la consommation totale et la répartition de cette consommation par opérateurs. Une difficulté a été rencontrée à l’envoiedes saisies utilisateurs. En effet d’un point de vue technique je désirais deux formulaires indépendants l’un de l’autre permettant ainsi de ne pas écraser la visualisation des graphiques correspondant à la région lorsque l’on modifie ceux du département et inversement. Cependant une solution a été trouvés avec l’implémentation d’inputs de type hidden associés a des tests conditionnels en PHP. D’un point de vue plus général, la partie PHP a été scinder en plusieurs scripts avec des fonctions bien spécifiques permettant de développer et de maintenir l’application plus facilement. Nous retrouvons alors un script pour la récupération de données que nous envoyons à un script qui réalise la représentation de ces données, un script de connexion, et un script dédié aux formulaires. Pour le style, j’ai procédé de la même façon avec le préprocesseur SASS. Concernant le javascript, les représentations ont été effectué avec la bibliothèque ChartJS car très complet, simple d’utilisation, et documentation détaillé.",
+        "img": "../assets/img/projects/1.jpg",
+        "link" : "https://github.com/dewaillyg/BugTracker.git"
+    },
+    "deux": {
+        "name": "Site vitrine",
+        "text": "Il s'agit ici de réaliser un site vitrine pour un foodtruck fictif dans le cadre de ma première année de formation au MMI. Ce site m'a permis d'en apprendre davantage sur  les technologies web avec entre autre le HTML5, le CSS3, le JavaScript et le JSON. Il intègre alors une base de données statique permettant de modifier dynamiquement les différents prix en fonction des saisies utilisateurs.",
+        "img": "../assets/img/projects/2.jpg",
+        "link" : "https://mmi-sae-105.vercel.app/"
+    },
+    "trois": {
+        "name": "Three + Blender",
+        "text": "Curieux de toutes sortes de technologies web, je me suis formé de façon autodidacte à l'intégration de contenu 3D dans le web au travers de plusieurs vidéos. Avec ce projet je me suis alors initié à la création d'avatar depuis myreadyplayerme ainsi qu'à son animation via Blender et l'application Mixamo. J'ai aussi pu découvrir l'environnement ReactJS et dans une moindre mesure la librarie ThreeJS    ",
+        "img": "",
+        "video": "../assets/videos/6.mp4",
+        "link" : "https://github.com/dewaillyg/Three-ReadyPlayerMe"
+    },
+    "quatre": {
+        "name": "Animation 3D",
+        "text": "Réalisation d'un tonneau inspiré du monde fictif de Sea of Theaves dans le cadre de ma deuxième année de formation au BUT MMI. Il m'a permit d'apprendre les bases et fondamentaux du logiciel Blender.",
+        "image": "",
+        "video": "../assets/videos/4.mp4",
+        "link" : ""
+    },
+    "cinq" : {
+        "name" : "Prodcution Audiovisuelle",
+        "text" : "Dans le cadre d'un projet universitaire en partenariat avec 'Le Village By Ca Rouen Vallée de Seine' nous avions du en équipe réaliser de A à Z une production audiovisuel permettant de mettre en avant les services proposés par l'entreprise pour les start-ups. Ainsi j'ai pu améliorer mes compétences photo et vidéo et apprendre de nouvelles méthodes de montage sur la suite Adobe (After Effect et Premiere Pro). Ce projet était à défendre sur site permettant également de consolider mes compétences communicationnelles.",
+        "image": "",
+        "video": "../assets/videos/5.mp4",
+        "link" : ""
+    },
+    "six" : {
+        "name" : "BugTracker",
+        "text" : "Réalisation d'un BugTracker dans le cadre de ma formation. L'objectif est de faire remonter des tickets d'incidents depuis des interfaces 'utilisateurs' vers des interfaces 'administrateurs'. Cette application web est codée principalement en PHP, et SQL pour la manipulation de données entre les différentes interfaces. Ci-dessous un lien permettant de vous rendre sur un dépôt Git où se trouve le code source.",
+        "img": "../assets/img/projects/6.jpg",
+        "video": "",
+        "link" : "https://github.com/dewaillyg/BugTracker"
+    }
+}

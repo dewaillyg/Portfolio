@@ -1,0 +1,231 @@
+@use '../bases/colors';
+@use '../bases/fonts';
+
+section.bio {
+    width: 100%;
+    height: 500px;
+    background-color: colors.$black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bio-left {
+        height: 100%;
+        width: 50%;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: colors.$light;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+
+        -moz-user-select: none;
+        /* Firefox */
+        -webkit-user-select: none;
+        /* Chrome, Safari, Opéra depuis la version 15 */
+        -ms-user-select: none;
+        /* Internet explorer depuis la version 10 et Edge */
+        user-select: none;
+        /* Propriété standard */
+
+
+        .top {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .bio-right {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+        .img {
+            width: 100%;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 60px;
+
+            .me {
+                height: 80%;
+                background: url("../../assets/img/me.png") center center/cover;
+                transform: rotate(4deg);
+                border-radius: 3px;
+            }
+        }
+        
+        .infos {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30%;
+            padding-right: 100px;   
+
+            .bioTxt {
+                color: colors.$light;
+                font-family: fonts.$stack;
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+.bio-left .top {
+    h2 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100%;
+        transform: rotate(-4deg);
+        
+        span {
+            position: relative;
+            color: colors.$light;
+            font-weight: 500;
+            font-style: normal;
+            letter-spacing: 1px;
+            margin-left: 10px;
+            font-size: 5vw;
+            font-family: fonts.$stack;
+        }
+
+        span.stop-blinking::before {
+            animation: none;
+        }
+
+        span::before {
+            content: "";
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            height: 60px;
+            width: 2px;
+            background: colors.$mainHigh;
+            transform: translateY(-45%);
+            animation: blinkCaracBar 0.7s infinite;
+        }
+    }
+}
+
+@keyframes blinkCaracBar {
+    50% {
+        opacity: 0;
+    }
+}
+
+.fa-hashtag {
+    transform: scale(2);
+    margin-right: 20px;
+    color: colors.$mainHigh;
+}
+
+@media screen and (max-width: 1000px) {
+    .bio-left .top h2 span{
+        font-size: 4vw;
+
+        &::before {
+            height: 40px;
+        }
+    }
+
+    section.bio .bio-right .img .me {
+        transform: scale(.8) rotate(2deg);
+    }
+
+    .bio-right h3.bioTxt {
+        font-size: 1rem;
+    }
+    
+    .fa-hashtag {
+        transform: scale(1.5);
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .bio-left .top h2 span{
+        font-size: 3vw;
+
+        &::before {
+            height: 30px;
+        }
+    }
+
+    section.bio .bio-right {
+        .infos {
+            height: 50%;
+        }
+
+        .img {
+            height: 50%;
+            
+            .me {
+                transform: scale(.8) rotate(2deg);
+            }
+        }
+    }
+    
+
+    .bio-right h3.bioTxt {
+        font-size: 1rem;
+    }
+    
+    .fa-hashtag {
+        transform: scale(1.2);
+    }
+}
+
+// MOBILE RESPONSIVE
+
+@media screen and (max-width: 450px) {
+    .bio {
+        flex-direction: column;
+
+        .bio-left {
+            margin-right: 5px;
+            height: 20%!important;
+            width: 90%!important;
+
+            h2.text span {
+                font-size: 20px;
+
+                &::before {
+                    height: 25px;
+                }
+            }
+
+            .fa-hashtag {
+                transform: scale(1);
+                margin-right: 3px;
+            }
+        }
+
+        .bio-right {
+            height: 70%!important;
+            width: 90%!important;
+            margin-right: 5px;
+
+            .img, .infos {
+                padding: 0!important;
+            }
+
+            .img .me {
+                transform: scale(1) rotate(2deg)!important;
+            }
+        }
+    }
+}

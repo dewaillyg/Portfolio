@@ -1,0 +1,77 @@
+@use '../bases/colors';
+@use '../bases/fonts';
+
+footer {
+    width: 100vw;
+    height: 300px;
+    border-top: 1px solid colors.$light;
+    border-bottom: 1px solid colors.$light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .social {
+        width: 90%;
+        height: 50%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        a {
+            height: 100%;
+            padding: 0 20px!important;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all .5s ease-in-out;
+            
+            &:hover {
+                background-color: colors.$light;
+                
+                i, p {
+                    color: colors.$black!important;
+                }
+            }
+        }
+        
+        .reseau {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            justify-content: space-around;
+            
+            i {
+                transform: scale(3);
+                color: colors.$light;
+                transition: all .5s ease-in-out;
+            }
+            
+            p {
+                transition: all .5s ease-in-out;
+                color: colors.$light;
+                font-family: fonts.$navbar-stack;
+                font-size: 2rem;
+            }
+
+
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        height: 150px;
+        i {
+            transform: scale(1.25)!important;
+        }
+
+        .social a {
+            padding: 0 5px!important;
+        }
+
+        p {
+            font-size: 0.8rem!important;
+        }
+    }
+}
