@@ -126,6 +126,10 @@ nav {
         align-items: center;
         justify-content: space-around;
         transition: all .25s ease;
+		
+		a {
+			text-decoration: none!important;
+		}
         
         i {
             display: flex;
@@ -144,10 +148,6 @@ nav {
 
         &:hover {
             cursor: pointer;
-
-            i, h2 {
-                color: colors.$valid;
-            }
 
             i {
                 animation: i-bounce .5s ease-in-out forwards;
